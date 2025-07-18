@@ -1,22 +1,28 @@
 ﻿<Properties StartupConfiguration="{0232D183-2430-4D83-A37A-0DDC25F76590}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MidTermProject/Views/Authors/Delete.cshtml">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MidTermProject PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MidTermProject/Models/MidTermDBContext.cs">
     <Files>
-      <File FileName="MidTermProject/Controllers/AuthorsController.cs" Line="24" Column="49" />
-      <File FileName="MidTermProject/Controllers/BooksController.cs" Line="101" Column="65" />
-      <File FileName="MidTermProject/Views/Authors/Index.cshtml" Line="32" Column="1" />
-      <File FileName="MidTermProject/Views/Authors/Create.cshtml" Line="18" Column="8" />
-      <File FileName="MidTermProject/Views/Authors/Edit.cshtml" Line="19" Column="8" />
-      <File FileName="MidTermProject/Views/Books/Create.cshtml" Line="26" Column="8" />
-      <File FileName="MidTermProject/Views/Books/Edit.cshtml" Line="32" Column="8" />
-      <File FileName="MidTermProject/Program.cs" Line="51" Column="1" />
-      <File FileName="MidTermProject/Models/Author.cs" Line="19" Column="1" />
-      <File FileName="MidTermProject/Models/Book.cs" Line="14" Column="1" />
-      <File FileName="MidTermProject/Models/MidTermDBContext.cs" Line="19" Column="73" />
-      <File FileName="MidTermProject/appsettings.json" Line="12" Column="2" />
-      <File FileName="MidTermProject/Views/Books/Index.cshtml" Line="44" Column="1" />
-      <File FileName="MidTermProject/Views/Books/Detail.cshtml" Line="17" Column="1" />
-      <File FileName="MidTermProject/Views/Books/Delete.cshtml" Line="39" Column="1" />
-      <File FileName="MidTermProject/Views/Authors/Details.cshtml" Line="21" Column="1" />
+      <File FileName="MidTermProject/Controllers/AuthorsController.cs" />
+      <File FileName="MidTermProject/Controllers/BooksController.cs" />
+      <File FileName="MidTermProject/Views/Authors/Index.cshtml" />
+      <File FileName="MidTermProject/Views/Authors/Create.cshtml" />
+      <File FileName="MidTermProject/Views/Authors/Edit.cshtml" />
+      <File FileName="MidTermProject/Views/Books/Create.cshtml" />
+      <File FileName="MidTermProject/Views/Books/Edit.cshtml" />
+      <File FileName="MidTermProject/Program.cs" Line="8" Column="29" />
+      <File FileName="MidTermProject/Models/Author.cs" />
+      <File FileName="MidTermProject/Models/Book.cs" />
+      <File FileName="MidTermProject/Models/MidTermDBContext.cs" Line="32" Column="48" />
+      <File FileName="MidTermProject/appsettings.json" />
+      <File FileName="MidTermProject/Views/Books/Index.cshtml" />
+      <File FileName="MidTermProject/Views/Books/Delete.cshtml" />
+      <File FileName="MidTermProject/Views/Authors/Details.cshtml" />
       <File FileName="MidTermProject/Views/Authors/Delete.cshtml" Line="28" Column="1" />
     </Files>
     <Pads>
@@ -24,16 +30,8 @@
         <State name="__root__">
           <Node name="MidTermProject" expanded="True">
             <Node name="MidTermProject">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views">
-                <Node name="Authors">
-                  <Node name="Delete.cshtml" selected="True" />
-                </Node>
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="images" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="MidTermDBContext.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -41,11 +39,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MidTermProject PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
 </Properties>

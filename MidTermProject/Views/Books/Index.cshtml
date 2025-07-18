@@ -1,12 +1,26 @@
 ﻿@model IEnumerable<MidTermProject.Models.Book>
 
 @{
-    ViewData["Title"] = "Books";
+    ViewData["Title"] = "Danh sách Sách";
 }
 
 <div class="container mt-4">
     <h2 class="mb-4">📚 Danh sách Sách</h2>
-    <a class="btn btn-success mb-3" asp-action="Create">➕ Thêm sách</a>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <form method="get" asp-action="Index">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control" placeholder="🔍 Tìm kiếm sách theo tên..." value="@Context.Request.Query["search"]" />
+                    <button class="btn btn-primary" type="submit">Tìm</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 text-end">
+            <a class="btn btn-success" asp-action="Create">➕ Thêm sách</a>
+            <a class="btn btn-outline-info" asp-action="Statistics">📊 Thống kê theo tác giả</a>
+        </div>
+    </div>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MidTermProject.Controllers.AuthorStatsViewModel>
+
+@{
+    ViewData["Title"] = "Thống kê sách theo tác giả";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">📊 Thống kê sách theo từng tác giả</h2>
+
+    @foreach (var author in Model)
+    {
+        <div class="card mb-3 shadow">
+            <div class="card-header bg-primary text-white">
+                <strong>
+                    @author.Name
+                (@author.BookCount sách)
+            </strong>
+        </div>
+        <div class="card-body">
+            @if (author.Books.Any())
+            {
+                <ul class="list-group list-group-flush">
+                    @foreach (var book in author.Books)
+                    {
+                        <li class="list-group-item">
+                            <strong>@book.Title</strong><br />
+                            <small class="text-muted">@book.Description</small>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">Không có sách nào.</p>
+            }
+        </div>
+    </div>
+}
+</div>

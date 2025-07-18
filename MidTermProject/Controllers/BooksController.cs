@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Hosting;
@@ -118,12 +119,19 @@ namespace MidTermProject.Controllers
         public IActionResult Statistics()
         {
             var stats = _context.Authors
+                .Include(a => a.Books)
                 .Select(a => new AuthorStatsViewModel
                 {
                     AuthorId = a.AuthorId,
                     Name = a.Name,
-                    BookCount = a.Books.Count
+                    BookCount = a.Books.Count,
+                    Books = a.Books.Select(b => new BookInfo
+                    {
+                        Title = b.Title,
+                        Description = b.Description
+                    }).ToList()
                 }).ToList();
+
             return View(stats);
         }
     }
@@ -133,5 +141,12 @@ namespace MidTermProject.Controllers
         public int AuthorId { get; set; }
         public string Name { get; set; }
         public int BookCount { get; set; }
+        public List<BookInfo> Books { get; set; } = new List<BookInfo>();
+    }
+
+    public class BookInfo
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }
