@@ -1,0 +1,20 @@
+﻿@model MidTermProject.Models.Author
+
+@{
+    ViewData["Title"] = "Chi tiết tác giả";
+}
+
+<div class="container mt-4">
+    <h2>📖 Chi tiết tác giả</h2>
+
+    <dl class="row">
+        <dt class="col-sm-2">Tên tác giả</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+
+        <dt class="col-sm-2">Tiểu sử</dt>
+        <dd class="col-sm-10">@Model.Bio</dd>
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model.AuthorId" class="btn btn-warning">✏️ Sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">⬅️ Quay lại</a>
+</div>

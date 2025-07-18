@@ -1,0 +1,19 @@
+﻿@model MidTermProject.Models.Author
+@{
+    ViewData["Title"] = "Chỉnh sửa Tác giả";
+}
+<h2>@ViewData["Title"]</h2>
+<form asp-action="Edit" method="post" class="p-4 border rounded bg-light">
+    <input type="hidden" asp-for="AuthorId" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Bio" class="form-label"></label>
+        <textarea asp-for="Bio" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

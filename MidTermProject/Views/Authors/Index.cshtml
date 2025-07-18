@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MidTermProject.Models.Author>
+@{
+    ViewData["Title"] = "Danh sách Tác giả";
+}
+<h2 class="mt-4">📚 Danh sách Tác giả</h2>
+<a href="/Authors/Create" class="btn btn-primary mb-3">➕ Thêm Tác giả</a>
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tiểu sử</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.AuthorId</td>
+                <td>@a.Name</td>
+                <td>@a.Bio</td>
+                <td>
+                    <a class="btn btn-info btn-sm" href="/Authors/Details/@a.AuthorId">Chi tiết</a>
+                    <a class="btn btn-warning btn-sm" href="/Authors/Edit/@a.AuthorId">Sửa</a>
+                    <a class="btn btn-danger btn-sm" href="/Authors/Delete/@a.AuthorId">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

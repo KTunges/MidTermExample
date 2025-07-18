@@ -1,0 +1,16 @@
+﻿@model MidTermProject.Models.Book
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h2>@Model.Title</h2>
+
+<div class="card" style="max-width: 600px;">
+    <img class="card-img-top" src="~/@Model.CoverImagePath" alt="Cover image" style="max-height: 300px; object-fit: cover;" />
+    <div class="card-body">
+        <h5 class="card-title">Author: @Model.Author?.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model MidTermProject.Models.Book
+@{
+    ViewData["Title"] = "Chỉnh sửa Sách";
+}
+<h2>@ViewData["Title"]</h2>
+<form asp-action="Edit" method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light">
+    <input type="hidden" asp-for="BookId" />
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Tác giả</label>
+        <select asp-for="AuthorId" asp-items="ViewBag.AuthorId" class="form-select"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Thay ảnh bìa (nếu cần)</label>
+        <input type="file" name="CoverImage" class="form-control" />
+        @if (!string.IsNullOrEmpty(Model.CoverImagePath))
+        {
+            <p class="mt-2">Ảnh hiện tại:</p>
+            <img src="@Model.CoverImagePath" width="120" />
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

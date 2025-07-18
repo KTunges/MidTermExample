@@ -1,0 +1,27 @@
+﻿@model MidTermProject.Models.Author
+
+@{
+    ViewData["Title"] = "Xoá Tác Giả";
+}
+
+<div class="container mt-4">
+    <h2>🗑️ Xác nhận xoá Tác Giả</h2>
+
+    <div class="alert alert-danger">
+        <strong>Bạn có chắc muốn xoá tác giả này không?</strong>
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-2">Tên tác giả</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+
+        <dt class="col-sm-2">Tiểu sử</dt>
+        <dd class="col-sm-10">@Model.Bio</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="AuthorId" />
+        <button type="submit" class="btn btn-danger">🗑️ Xoá</button>
+        <a asp-action="Index" class="btn btn-secondary">⬅️ Quay lại</a>
+    </form>
+</div>

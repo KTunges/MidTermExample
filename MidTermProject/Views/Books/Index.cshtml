@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MidTermProject.Models.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">📚 Danh sách Sách</h2>
+    <a class="btn btn-success mb-3" asp-action="Create">➕ Thêm sách</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Tiêu đề</th>
+                <th>Mô tả</th>
+                <th>Tác giả</th>
+                <th>Ảnh bìa</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td>@item.Author?.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.CoverImagePath))
+                        {
+                            <img src="@item.CoverImagePath" alt="Cover" width="60" />
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Edit" asp-route-id="@item.BookId">✏️</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.BookId">🗑️</a>
+                        <a class="btn btn-secondary btn-sm" asp-action="Details" asp-route-id="@item.BookId">🔍</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
